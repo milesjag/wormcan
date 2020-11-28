@@ -1,6 +1,8 @@
-CREATE TABLE main.activity
+CREATE TABLE main.electrical_activity
 (
 	pin_id INTEGER,
-	reading NUMERIC,
-	measured_at TIMESTAMP WITHOUT TIME ZONE
+	baseline_activity: INTEGER,
+	filtered_activity: INTEGER,
+	is_touched: BOOLEAN,
+	measured_at TIMESTAMP WITH TIME ZONE
 );
