@@ -4,17 +4,19 @@ import io
 
 
 def get_s3_object(bucket: str, key: str) -> str:
-    """Downloads into memory and returns an S3 file"""
+    """
+    Downloads S3 file and returns as decoded string
+    """
     client = boto3.client("s3")
     s3_object = client.get_object(Bucket=bucket, Key=key)
-    s3_object = io.BytesIO(s3_object["Body"].read())
+    s3_object = io.BytesIO(s3_object["Body"].read()).read().decode("utf-8")
     return s3_object
 
 
 def delete_s3_object(bucket: str, key: str):
     """
-  Deletes an object from S3
-  """
+    Deletes an object from S3
+    """
     client = boto3.client("s3")
     client.delete_object(Bucket=bucket, Key=key)
     return
