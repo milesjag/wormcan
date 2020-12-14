@@ -1,0 +1,20 @@
+{
+	"records": 
+	[
+		{
+			"measured_at": "2020-01-01T00:00:00.0000",
+			"activity_reading": 100.0,
+			"sector": "a1"
+		},
+		{
+			"measured_at": "2020-01-01T01:00:00.0000",
+			"activity_reading": 99.0,
+			"sector": "a1"
+		},
+		{
+			"measured_at": "2020-01-01T02:00:00.0000",
+			"activity_reading": 101.0,
+			"sector": "a1"
+		}
+	]
+}
